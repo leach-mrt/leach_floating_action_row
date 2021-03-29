@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Creates a button for [FloatingActionRow]
-class FloatingActionRowWidgetButton extends StatelessWidget {
+class FloatingActionRowWidget extends StatelessWidget {
   final Widget widget;
 
   /// Background color
@@ -16,7 +16,7 @@ class FloatingActionRowWidgetButton extends StatelessWidget {
   final Color? foregroundColor;
   final GestureTapCallback onTap;
 
-  FloatingActionRowWidgetButton({
+  FloatingActionRowWidget({
     required this.widget,
     this.color = Colors.transparent,
     this.size,
