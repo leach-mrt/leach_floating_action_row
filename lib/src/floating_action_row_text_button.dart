@@ -12,11 +12,11 @@ class FloatingActionRowTextButton extends StatelessWidget {
   final EdgeInsets padding;
   final ShapeBorder? shape;
 
-  /// Foreground color for [icon]
+  /// Foreground color for [text]
   final Color? foregroundColor;
   final GestureTapCallback onTap;
 
-  FloatingActionRowButton({
+  FloatingActionRowTextButton({
     required this.text,
     this.color = Colors.transparent,
     this.size,
@@ -55,12 +55,8 @@ class FloatingActionRowTextButton extends StatelessWidget {
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0),
                   ),
-              child: TextTheme.merge(
-                data: TextThemeData(
-                  color: foregroundColor ?? defaultColor,
-                ),
-                child: text,
-              ),
+              child: text,
+              textStyle: TextStyle(color: foregroundColor ?? defaultColor,),
               onPressed: onTap,
             ),
           ),
